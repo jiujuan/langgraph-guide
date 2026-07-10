@@ -9,7 +9,7 @@
 运行命令：
 
 ```bash
-python chapter05_first_graph.py
+python codes/chapter05/chapter05_first_graph.py
 ```
 
 期望看到类似输出：
@@ -32,7 +32,7 @@ State -> Node -> Edge -> Graph -> invoke
 
 ## 5.2 完整代码
 
-新建 `chapter05_first_graph.py`：
+新建 `codes/chapter05/chapter05_first_graph.py`：
 
 ```python
 from typing import TypedDict
@@ -47,7 +47,7 @@ class ChatState(TypedDict):
 
 
 llm = ChatOllama(
-    model="qwen2.5:7b-instruct",
+    model="qwen3:4b",
     temperature=0,
 )
 
@@ -78,7 +78,7 @@ if __name__ == "__main__":
 先运行它：
 
 ```bash
-python chapter05_first_graph.py
+python codes/chapter05/chapter05_first_graph.py
 ```
 
 如果模型已经通过上一章验证，程序应该能输出模型回答。
@@ -321,7 +321,7 @@ from langchain_ollama import ChatOllama
 
 
 llm = ChatOllama(
-    model="qwen2.5:7b-instruct",
+    model="qwen3:4b",
     temperature=0,
 )
 ```

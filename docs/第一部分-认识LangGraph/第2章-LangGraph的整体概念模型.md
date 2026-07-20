@@ -39,7 +39,7 @@ print(result["answer"])
 answer = llm.invoke("LangGraph 是什么？")
 ```
 
-但 LangGraph 的重点不在这个最小例子本身，而在这个例子已经包含了完整的心智模型：
+但 LangGraph 的重点不在这个最小例子本身，而在这个例子已经包含了完整的 LangGraph 构建 Agent 的基本模型：
 
 - `ChatState` 定义图运行时携带什么状态。
 - `answer_question` 是一个节点，负责读取状态并返回状态更新。
@@ -52,7 +52,7 @@ answer = llm.invoke("LangGraph 是什么？")
 
 ## 2.2 用一张图建立整体印象
 
-LangGraph 的整体模型可以先看成四层：
+LangGraph 的整体架构设计可以先看成四层：
 
 ```mermaid
 flowchart TD
@@ -66,7 +66,7 @@ flowchart TD
   C --> D
 ```
 
-这四层不是严格的源码分层，而是读者理解 LangGraph 时最有用的心智分层。
+这四层不是严格的源码分层，而是读者理解 LangGraph 时最有用的架构分层。
 
 应用目标回答“我要做什么”。例如，我们要做一个研究助手。
 
@@ -521,7 +521,7 @@ flowchart TD
 
 本章从一个最小 LangGraph 程序出发，逐步解释了 LangGraph 的整体概念模型。
 
-你不需要一次记住所有 API，但应该建立一个基本心智模型：
+你不需要一次记住所有 API，但应该建立一个基本概念模型：
 
 - `State` 是 Agent 的工作记忆。
 - `Node` 是执行一步工作的函数。

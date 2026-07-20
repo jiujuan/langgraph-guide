@@ -69,16 +69,16 @@ flowchart TD
 
 - 如果你看到的是聊天助手、研究助手、代码助手，这是应用层。
 - 如果你看到的是 `StateGraph`、`graph.invoke()`、`graph.stream()`，这是编程接口层。
-- 如果你看到的是节点、边、reducer、`Command`，这是图编译层。
+- 如果你看到的是Node、Edge、Reducer、Command，这是图编译层。
 - 如果你看到的是 Pregel、channel、superstep，这是运行时层。
 - 如果你看到的是 checkpoint、store、interrupt、streaming、LangSmith，这是工程能力层。
 
-这五层可以理解为从“我要做什么”一路下沉到“系统如何可靠执行”。
+这五层可以理解为从我要做什么一路下沉到系统如何可靠执行。
 
 | 层级 | 回答的问题 | 典型内容 |
 | --- | --- | --- |
 | 应用层 | 我要构建什么 Agent？ | Chatbot、Research Agent、Workflow Agent |
-| 编程接口层 | 我用什么方式描述这个 Agent？ | `StateGraph`、Functional API、Prebuilt Agent |
+| 编程接口层 | 我用什么方式描述这个 Agent？ | StateGraph、Functional API、Prebuilt Agent |
 | 图编译层 | 这个 Agent 如何变成图？ | Node、Edge、Reducer、Command、Send |
 | 运行时层 | 这张图如何被执行？ | Pregel、Channel、Superstep |
 | 工程能力层 | 长任务如何可靠运行？ | Checkpoint、Store、Interrupt、Streaming、LangSmith |
@@ -89,7 +89,7 @@ flowchart TD
 
 应用层是读者最容易理解的一层，因为它离业务最近。
 
-我们使用 LangGraph，不是为了“使用 LangGraph”本身，而是为了构建某种 Agent 应用。常见应用包括：
+我们使用 LangGraph，不是为了使用 LangGraph本身，而是为了构建某种 Agent 应用。常见应用包括：
 
 - 聊天助手：能记住上下文，能调用工具，能持续对话。
 - 研究助手：能拆解问题，检索资料，审查结果，生成报告。
